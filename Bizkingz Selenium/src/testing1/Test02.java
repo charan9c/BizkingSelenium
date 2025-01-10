@@ -25,11 +25,11 @@ public class Test02 {
             WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input-0")));  // Wait for the element to be present
 
             // Locate the username field and enter the username
-            email.sendKeys("notsharable@gmail.com");
+            email.sendKeys("cityleadhyd@bizkingz.com");
 
             // Wait for the password field to be visible
             WebElement password = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input-2")));
-            password.sendKeys("notsharable");
+            password.sendKeys("bkap@123");
 
             // Locate the login button and click it
             WebElement submit = wait.until(ExpectedConditions.elementToBeClickable(By.id("button_id")));
@@ -40,6 +40,9 @@ public class Test02 {
 
             // Output message to indicate login success
             System.out.println("Login Successful");
+            
+            
+            WebElement lead = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Lead']")));  lead.click();
 
         } catch (Exception e) {
             // Handle exceptions if any error occurs
